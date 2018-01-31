@@ -1,0 +1,12 @@
+{
+  "db_local": {
+    "host": "localhost",
+    "database": "todolist_db",
+    "password": "",
+    "name": "db_local",
+    "connector": "mysql",
+    "user": "root",
+    "dateStrings": false
+
+  }
+}

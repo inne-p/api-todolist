@@ -1,0 +1,49 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "mysql": {
+      "table": "User"
+    },
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__get__profiles"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__update__profiles"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY",
+      "property": "__create__profiles"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY",
+      "property": "__destroy__profiles"
+    }
+  ],
+  "methods": {}
+}
+
